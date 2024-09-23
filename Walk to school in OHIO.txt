@@ -1,0 +1,195 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Walk to school in OHIO",
+   LoadingTitle = "Loading...",
+   LoadingSubtitle = "Please Wait",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = WalktoschoolinOHIO, -- Create a custom folder for your hub/game
+      FileName = "config"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "",
+      Subtitle = "",
+      Note = "",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"",""} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+-- Remove Tab
+local Anti = Window:CreateTab("Remove", 4483362458) -- Title, Image
+
+local Button = Anti:CreateButton({
+   Name = "Remove Roomba's",
+   Callback = function()
+   workspace.Roomba:Destroy()
+   workspace["Roomba v2"]:Destroy()
+   workspace:GetChildren()[227]:Destroy()
+   workspace:GetChildren()[338]:Destroy()
+   workspace:GetChildren()[221]:Destroy()
+   workspace:GetChildren()[339]:Destroy()
+   end,
+})
+local Button = Anti:CreateButton({
+   Name = "Remove Knife Guy",
+   Callback = function()
+   workspace:GetChildren()[160]:Destroy()
+   workspace.cl_ouder:Destroy()
+   workspace:GetChildren()[140]:Destroy()
+   end,
+})
+local Button = Anti:CreateButton({
+   Name = "Remove DeathParts",
+   Callback = function()
+   workspace.DeathParts:Destroy()
+   workspace["\235\170\168\235\158\152 \236\149\136\236\151\144 \235\147\164\236\150\180\236\158\136\235\141\152  \235\143\140\236\161\176\234\176\129\236\157\132 \235\176\159\236\149\132 \236\132\184\234\183\160\236\151\144 \234\176\144\236\151\188\235\144\152\236\150\180 \236\130\172\235\167\157"]:Destroy()
+   workspace["100\235\167\140\235\179\188\237\138\184\235\161\156 \237\157\144\235\165\180\235\141\152 \236\160\132\235\165\152\236\151\144 \235\139\191\236\149\132 \236\130\172\235\167\157"]:Destroy()
+   workspace:GetChildren()[355]:Destroy()
+   workspace:GetChildren()[278]:Destroy()
+   workspace["\236\185\188\236\176\140"]:Destroy()
+   workspace:GetChildren()[318]:Destroy()
+   workspace:GetChildren()[319]:Destroy()
+   workspace:GetChildren()[320]:Destroy()
+   workspace:GetChildren()[321]:Destroy()
+   workspace:GetChildren()[334]:Destroy()
+   workspace["\235\172\180\235\140\128\236\151\144 \235\130\156\236\158\133\237\149\180 \236\130\172\237\152\149"]:Destroy()
+   workspace.barriers:GetChildren()[8]:Destroy()
+   workspace.barriers:GetChildren()[9]:Destroy()
+   end,
+})
+local Button = Anti:CreateButton({
+   Name = "Remove SpikeTraps",
+   Callback = function()
+   workspace:GetChildren()[84]:Destroy()
+   workspace["2x2_Spike_Traps"]:Destroy()
+   end,
+})
+local Button = Anti:CreateButton({
+   Name = "Remove Landmines",
+   Callback = function()
+   workspace:GetChildren()[49]:Destroy()
+   end,
+})
+local Button = Anti:CreateButton({
+   Name = "Remove Worker",
+   Callback = function()
+   workspace:GetChildren()[157]:Destroy()
+   workspace:GetChildren()[72]:Destroy()
+   workspace:GetChildren()[224]:Destroy()
+   workspace:GetChildren()[226]:Destroy()
+   end,
+})
+local Button = Anti:CreateButton({
+   Name = "Remove Helicopters",
+   Callback = function()
+   workspace:GetChildren()[299]:Destroy()
+   workspace:GetChildren()[298]:Destroy()
+   workspace:GetChildren()[300]:Destroy()
+   workspace:GetChildren()[301]:Destroy()
+   workspace:GetChildren()[302]:Destroy()
+   workspace:GetChildren()[303]:Destroy()
+   workspace:GetChildren()[304]:Destroy()
+   end,
+})
+local Button = Anti:CreateButton({
+   Name = "Remove I love money npc",
+   Callback = function()
+   workspace.KeyDoors["17"]:Destroy()
+   workspace.KeyDoors["18"]:Destroy()
+   end,
+})
+-- Player Tab
+local Tab = Window:CreateTab("Player", 4483362458) -- Title, Image
+local Slider = Tab:CreateSlider({
+   Name = "WalkSpeed",
+   Range = {16, 50},
+   Increment = 1,
+   Suffix = "",
+   CurrentValue = 16,
+   Flag = "Walk", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   game.Players.LocalPlayer.Character:WaitForChild("Humanoid").WalkSpeed = Value
+   -- The variable (Value) is a number which correlates to the value the slider is currently at
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Infinite Jump",
+   Callback = function()
+   loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Jump.txt"))()
+   end,
+})
+local Button = Tab:CreateButton({
+   Name = "Fly (E Toggle)",
+   Callback = function()
+   loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Fly.txt"))()
+   end,
+})
+--Misc Tab
+local Misc = Window:CreateTab("Miscellaneous", 4483362458) -- Title, Image
+local Button = Misc:CreateButton({
+   Name = "Complete Game",
+   Callback = function()
+   print("Started!")
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["0"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["1"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["2"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["3"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["4"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["5"].Position)
+   wait(0.2)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["6"].Position)
+   wait(0.2)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["7"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["8"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["9"].Position)
+   wait(0.2)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["10"].Position)
+   wait(0.2)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["11"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["12"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["13"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["14"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["15"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["16"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["17"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["18"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Checkpoints["19"].Position)
+   wait(0.5)
+   game.Players.LocalPlayer.Character:MoveTo(workspace.Cutscene.Cutscene1.Position)
+   print("Done!")      
+   end,
+})
+local Button = Misc:CreateButton({
+   Name = "Infinite Yield",
+   Callback = function()
+   loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+   end,
+})
+--Credits Tab
+local Credits = Window:CreateTab("Credits", 4483362458) -- Title, Image
+local Paragraph = Credits:CreateParagraph({Title = "25K_Bacon", Content = "Basically Everything"})
+local Paragraph = Credits:CreateParagraph({Title = "Sebi_Game", Content = "Testing"})
